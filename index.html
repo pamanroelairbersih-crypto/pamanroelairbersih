@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Paman Roel Airbersih | Supplier dan Distribusi Air Bersih Terpercaya</title>
+    <meta name="description" content="Paman Roel Airbersih melayani suplai dan distribusi air bersih untuk rumah tangga, perumahan, perusahaan, industri, proyek konstruksi, hotel, restoran, dan fasilitas umum. Hubungi kami untuk informasi dan penawaran harga.">
+    <meta name="keywords" content="Paman Roel Airbersih, Supplier air bersih, Jasa suplai air bersih, Distribusi air bersih, Supplier air bersih perusahaan, Supplier air bersih industri, Suplai air bersih proyek, Mobil tangki air bersih, Pengiriman air bersih">
+    <meta name="author" content="Paman Roel Airbersih">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284c7',
+                            darkblue: '#0369a1',
+                            cyan: '#06b6d4',
+                            accent: '#eab308'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-water-pattern {
+            background-image: radial-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 shadow-sm transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand Title -->
+                <div class="flex items-center space-x-3">
+                    <img src="776253023_122127128571354968_8445511704765418148_n.jpg" 
+                         alt="Logo Paman Roel Airbersih" 
+                         class="h-12 w-12 rounded-full border-2 border-cyan-500 shadow-md object-cover"
+                         onerror="this.src='https://placehold.co/100x100/0284c7/fff?text=Paman+Roel'">
+                    <div>
+                        <a href="#" class="text-xl sm:text-2xl font-black tracking-tight text-cyan-600 dark:text-cyan-400 flex items-center gap-1">
+                            PamanRoel<span class="text-slate-900 dark:text-white">Airbersih</span>
+                        </a>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide hidden sm:block" data-i18n="tagline_nav">
+                            Solusi Kebutuhan Air Bersih Anda
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links (Desktop) -->
+                <nav class="hidden lg:flex space-x-6 font-semibold text-sm">
+                    <a href="#hero" class="text-cyan-600 dark:text-cyan-400 hover:text-cyan-500 transition-colors" data-i18n="nav_home">Beranda</a>
+                    <a href="#tentang" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors" data-i18n="nav_about">Tentang Kami</a>
+                    <a href="#visimisi" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors" data-i18n="nav_vision">Visi & Misi</a>
+                    <a href="#keunggulan" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors" data-i18n="nav_why">Mengapa Kami</a>
+                    <a href="#layanan" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors" data-i18n="nav_services">Layanan</a>
+                    <a href="#galeri" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors" data-i18n="nav_gallery">Galeri</a>
+                    <a href="#kontak" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors" data-i18n="nav_contact">Kontak</a>
+                </nav>
+
+                <!-- Controls: Language Toggle & Dark Mode Toggle -->
+                <div class="flex items-center space-x-3">
+                    <!-- Language Switcher -->
+                    <button id="langToggleBtn" onclick="toggleLanguage()" class="flex items-center space-x-1 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                        <i class="fa-solid fa-globe text-cyan-500"></i>
+                        <span id="langLabel">ID</span>
+                    </button>
+
+                    <!-- Dark Mode Switcher -->
+                    <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Toggle Mode">
+                        <i id="themeIcon" class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <!-- WhatsApp CTA Mobile/Desktop -->
+                    <a href="https://wa.me/6281339391396" target="_blank" class="hidden sm:inline-flex items-center px-4 py-2 text-xs font-bold rounded-lg text-white bg-green-600 hover:bg-green-700 transition shadow-md hover:shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-lg mr-2"></i>
+                        <span data-i18n="btn_order">Pesan Air</span>
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-600 dark:text-slate-300 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-2 pb-4 space-y-3 font-medium">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block text-cyan-600 dark:text-cyan-400" data-i18n="nav_home">Beranda</a>
+            <a href="#tentang" onclick="toggleMobileMenu()" class="block text-slate-700 dark:text-slate-200" data-i18n="nav_about">Tentang Kami</a>
+            <a href="#visimisi" onclick="toggleMobileMenu()" class="block text-slate-700 dark:text-slate-200" data-i18n="nav_vision">Visi & Misi</a>
+            <a href="#keunggulan" onclick="toggleMobileMenu()" class="block text-slate-700 dark:text-slate-200" data-i18n="nav_why">Mengapa Kami</a>
+            <a href="#layanan" onclick="toggleMobileMenu()" class="block text-slate-700 dark:text-slate-200" data-i18n="nav_services">Layanan</a>
+            <a href="#galeri" onclick="toggleMobileMenu()" class="block text-slate-700 dark:text-slate-200" data-i18n="nav_gallery">Galeri</a>
+            <a href="#kontak" onclick="toggleMobileMenu()" class="block text-slate-700 dark:text-slate-200" data-i18n="nav_contact">Kontak</a>
+            <a href="https://wa.me/6281339391396" target="_blank" class="flex items-center justify-center w-full py-2 bg-green-600 text-white rounded-lg font-bold">
+                <i class="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp (+62 813-3939-1396)
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative py-12 md:py-20 bg-water-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-droplet text-cyan-500"></i>
+                        <span data-i18n="hero_badge">Supplier Air Bersih Terpercaya Sejak 2023</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white leading-tight">
+                        <span data-i18n="hero_title_1">Air Bersih untuk Kehidupan yang</span> 
+                        <span class="text-cyan-600 dark:text-cyan-400 block sm:inline" data-i18n="hero_title_2">Lebih Baik</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0" data-i18n="hero_desc">
+                        Paman Roel Airbersih melayani suplai dan distribusi air bersih untuk rumah tangga, perumahan, perusahaan, industri, proyek konstruksi, hotel, restoran, rumah sakit, serta fasilitas umum.
+                    </p>
+
+                    <!-- Quick Info Icons -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-4 text-left">
+                        <div class="p-3 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/60 flex items-center space-x-3">
+                            <i class="fa-solid fa-shield-halved text-2xl text-cyan-500"></i>
+                            <div>
+                                <h4 class="font-bold text-xs" data-i18n="feat_1">Terpercaya</h4>
+                                <p class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="sub_feat_1">Kualitas Terjamin</p>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/60 flex items-center space-x-3">
+                            <i class="fa-solid fa-bolt text-2xl text-cyan-500"></i>
+                            <div>
+                                <h4 class="font-bold text-xs" data-i18n="feat_2">Responsif</h4>
+                                <p class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="sub_feat_2">Pengiriman Cepat</p>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/60 flex items-center space-x-3">
+                            <i class="fa-solid fa-handshake text-2xl text-cyan-500"></i>
+                            <div>
+                                <h4 class="font-bold text-xs" data-i18n="feat_3">Profesional</h4>
+                                <p class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="sub_feat_3">Pelayanan Terbaik</p>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/60 flex items-center space-x-3">
+                            <i class="fa-solid fa-tags text-2xl text-cyan-500"></i>
+                            <div>
+                                <h4 class="font-bold text-xs" data-i18n="feat_4">Kompetitif</h4>
+                                <p class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="sub_feat_4">Harga Penawaran</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/6281339391396?text=Halo%20Paman%20Roel,%20saya%20ingin%20memesan%20air%20bersih" 
+                           target="_blank"
+                           class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold shadow-lg hover:shadow-green-500/20 transition flex items-center justify-center space-x-3">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span data-i18n="btn_hero_wa">Hubungi Kami Sekarang</span>
+                        </a>
+                        <a href="#tentang" 
+                           class="px-8 py-4 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-xl font-bold transition flex items-center justify-center">
+                            <span data-i18n="btn_hero_about">Tentang Paman Roel</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Main Featured Banner -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group w-full max-w-lg">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+                        <div class="relative bg-white dark:bg-slate-800 p-2 rounded-2xl shadow-xl overflow-hidden border border-slate-200 dark:border-slate-700">
+                            <img src="Paman Roel_ Solusi Air Bersih Anda.png" 
+                                 alt="Spanduk Paman Roel Air Bersih" 
+                                 class="w-full h-auto rounded-xl object-cover hover:scale-[1.02] transition duration-300"
+                                 onerror="this.src='https://placehold.co/600x400/0284c7/fff?text=Paman+Roel+Air+Bersih'">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: TENTANG PAMAN ROEL AIRBERSIH -->
+    <section id="tentang" class="py-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-cyan-600 dark:text-cyan-400 font-bold text-sm tracking-wider uppercase">
+                        <i class="fa-solid fa-building-user"></i>
+                        <span data-i18n="about_subtitle_badge">Profil Perusahaan</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white" data-i18n="about_title">
+                        TENTANG PAMAN ROEL AIRBERSIH
+                    </h2>
+                    <div class="prose dark:prose-invert text-slate-600 dark:text-slate-300 space-y-4 text-base leading-relaxed">
+                        <p data-i18n="about_p1">
+                            Paman Roel Airbersih merupakan perusahaan yang bergerak di bidang penyediaan dan distribusi air bersih untuk memenuhi berbagai kebutuhan masyarakat, perumahan, perusahaan, industri, proyek konstruksi, serta berbagai fasilitas umum dan komersial.
+                        </p>
+                        <p data-i18n="about_p2">
+                            Berdiri sejak tahun 2023, Paman Roel Airbersih hadir dengan komitmen memberikan solusi kebutuhan air bersih melalui pelayanan yang profesional, responsif, terpercaya, dan harga yang kompetitif.
+                        </p>
+                        <p data-i18n="about_p3">
+                            Didukung armada kendaraan distribusi air bersih, kami berupaya memberikan pelayanan pengiriman yang efektif dan menyesuaikan kebutuhan pelanggan.
+                        </p>
+                        <p data-i18n="about_p4" class="font-medium text-slate-800 dark:text-slate-200">
+                            Kami memahami bahwa air bersih merupakan kebutuhan penting dalam kehidupan sehari-hari maupun keberlangsungan operasional usaha dan industri. Oleh karena itu, kepuasan pelanggan, kepercayaan, dan kualitas pelayanan menjadi prioritas kami.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-cyan-50 dark:bg-slate-800/80 rounded-xl border-l-4 border-cyan-500 font-semibold text-cyan-900 dark:text-cyan-200">
+                        <span data-i18n="about_slogan">Paman Roel Airbersih – Solusi Kebutuhan Air Bersih Anda.</span>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700">
+                            <img src="Paman Roel_ Solusi Air Bersih.png" 
+                                 alt="Tentang Paman Roel Airbersih" 
+                                 class="w-full h-auto object-cover"
+                                 onerror="this.src='https://placehold.co/600x450/0284c7/fff?text=Profil+Paman+Roel'">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-cyan-600 text-white p-6 rounded-2xl shadow-xl hidden sm:block">
+                            <p class="text-3xl font-black">Est. 2023</p>
+                            <p class="text-xs uppercase tracking-wider font-semibold" data-i18n="est_label">Melayani Sepenuh Hati</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: VISI & MISI -->
+    <section id="visimisi" class="py-16 bg-slate-100 dark:bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- VISI -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-cyan-600 to-blue-700 text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h2 class="text-3xl font-black mb-4 uppercase tracking-wide" data-i18n="visi_title">VISI</h2>
+                        <p class="text-lg leading-relaxed text-cyan-50 font-light" data-i18n="visi_desc">
+                            "Menjadi supplier dan mitra penyedia air bersih yang terpercaya, profesional, dan menjadi pilihan utama masyarakat, perusahaan, serta berbagai sektor usaha dalam memenuhi kebutuhan air bersih."
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/20 flex items-center gap-3">
+                        <i class="fa-solid fa-award text-amber-300 text-2xl"></i>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-cyan-100" data-i18n="visi_footer">Komitmen Kualitas Utama</span>
+                    </div>
+                </div>
+
+                <!-- MISI -->
+                <div class="lg:col-span-7 bg-white dark:bg-slate-800 rounded-3xl p-8 sm:p-10 shadow-lg border border-slate-200 dark:border-slate-700">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-cyan-100 dark:bg-cyan-950 text-cyan-600 dark:text-cyan-400 rounded-xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-wide" data-i18n="misi_title">MISI</h2>
+                    </div>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <span class="w-7 h-7 rounded-full bg-cyan-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium" data-i18n="misi_1">Menyediakan layanan distribusi air bersih yang mengutamakan kualitas pelayanan.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="w-7 h-7 rounded-full bg-cyan-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium" data-i18n="misi_2">Memberikan pelayanan yang cepat, responsif, dan profesional.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="w-7 h-7 rounded-full bg-cyan-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium" data-i18n="misi_3">Menawarkan harga yang kompetitif sesuai kebutuhan pelanggan.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="w-7 h-7 rounded-full bg-cyan-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium" data-i18n="misi_4">Mengembangkan kapasitas dan kesiapan armada distribusi.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="w-7 h-7 rounded-full bg-cyan-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium" data-i18n="misi_5">Membangun hubungan kerja sama jangka panjang dengan pelanggan.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="w-7 h-7 rounded-full bg-cyan-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium" data-i18n="misi_6">Mengutamakan kepercayaan, kepuasan, dan kenyamanan pelanggan.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="w-7 h-7 rounded-full bg-cyan-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">7</span>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium" data-i18n="misi_7">Mendukung pemenuhan kebutuhan air bersih untuk masyarakat, bisnis, industri, dan pembangunan.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: MENGAPA MEMILIH PAMAN ROEL AIRBERSIH? -->
+    <section id="keunggulan" class="py-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white uppercase tracking-wide" data-i18n="why_title">
+                    MENGAPA MEMILIH PAMAN ROEL AIRBERSIH?
+                </h2>
+                <div class="w-20 h-1 bg-cyan-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. Terpercaya -->
+                <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-cyan-500 transition shadow-sm hover:shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/60 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-black mb-4">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="why1_title">1. TERPERCAYA</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="why1_desc">
+                        Kami mengutamakan kepercayaan dan hubungan kerja sama yang baik dengan setiap pelanggan.
+                    </p>
+                </div>
+
+                <!-- 2. Responsif -->
+                <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-cyan-500 transition shadow-sm hover:shadow-md">
+                    <div class="w-12 h-12 bg-cyan-100 dark:bg-cyan-900/60 rounded-xl flex items-center justify-center text-cyan-600 dark:text-cyan-400 text-xl font-black mb-4">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="why2_title">2. RESPONSIF</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="why2_desc">
+                        Kami berkomitmen memberikan tanggapan dan pelayanan yang komunikatif terhadap kebutuhan pelanggan.
+                    </p>
+                </div>
+
+                <!-- 3. Profesional -->
+                <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-cyan-500 transition shadow-sm hover:shadow-md">
+                    <div class="w-12 h-12 bg-teal-100 dark:bg-teal-900/60 rounded-xl flex items-center justify-center text-teal-600 dark:text-teal-400 text-xl font-black mb-4">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="why3_title">3. PROFESIONAL</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="why3_desc">
+                        Kami mengutamakan profesionalisme dalam pelayanan, koordinasi, dan proses distribusi.
+                    </p>
+                </div>
+
+                <!-- 4. Harga Kompetitif -->
+                <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-cyan-500 transition shadow-sm hover:shadow-md">
+                    <div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/60 rounded-xl flex items-center justify-center text-amber-600 dark:text-amber-400 text-xl font-black mb-4">
+                        4
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="why4_title">4. HARGA KOMPETITIF</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="why4_desc">
+                        Kami menawarkan harga yang kompetitif dan dapat disesuaikan dengan kebutuhan serta volume pemesanan.
+                    </p>
+                </div>
+
+                <!-- 5. Armada Distribusi -->
+                <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-cyan-500 transition shadow-sm hover:shadow-md">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/60 rounded-xl flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-xl font-black mb-4">
+                        5
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="why5_title">5. ARMADA DISTRIBUSI</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="why5_desc">
+                        Didukung armada kendaraan distribusi untuk membantu memenuhi kebutuhan pengiriman air bersih.
+                    </p>
+                </div>
+
+                <!-- 6. Melayani Berbagai Sektor -->
+                <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-cyan-500 transition shadow-sm hover:shadow-md">
+                    <div class="w-12 h-12 bg-rose-100 dark:bg-rose-900/60 rounded-xl flex items-center justify-center text-rose-600 dark:text-rose-400 text-xl font-black mb-4">
+                        6
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="why6_title">6. MELAYANI BERBAGAI SEKTOR</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="why6_desc">
+                        Melayani kebutuhan rumah tangga, perumahan, perusahaan, industri, konstruksi, hotel, restoran, dan fasilitas umum.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: LAYANAN KAMI -->
+    <section id="layanan" class="py-16 bg-slate-100 dark:bg-slate-800/40 border-t border-slate-200 dark:border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white uppercase tracking-wide" data-i18n="services_section_title">
+                    Layanan Kami
+                </h2>
+                <p class="mt-3 text-slate-600 dark:text-slate-400" data-i18n="services_subtitle">
+                    Kebutuhan Air Bersih Anda, Kami Siap Membantu
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Layanan 1 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-start space-x-4">
+                    <div class="p-3 bg-cyan-100 text-cyan-600 dark:bg-cyan-900/50 dark:text-cyan-400 rounded-xl text-xl flex-shrink-0">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white" data-i18n="s1">Suplai air bersih rumah tangga dan perumahan</h4>
+                    </div>
+                </div>
+
+                <!-- Layanan 2 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-start space-x-4">
+                    <div class="p-3 bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400 rounded-xl text-xl flex-shrink-0">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white" data-i18n="s2">Suplai air bersih perusahaan dan industri</h4>
+                    </div>
+                </div>
+
+                <!-- Layanan 3 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-start space-x-4">
+                    <div class="p-3 bg-teal-100 text-teal-600 dark:bg-teal-900/50 dark:text-teal-400 rounded-xl text-xl flex-shrink-0">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white" data-i18n="s3">Suplai air bersih proyek konstruksi</h4>
+                    </div>
+                </div>
+
+                <!-- Layanan 4 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-start space-x-4">
+                    <div class="p-3 bg-amber-100 text-amber-600 dark:bg-amber-900/50 dark:text-amber-400 rounded-xl text-xl flex-shrink-0">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white" data-i18n="s4">Suplai air bersih hotel dan restoran</h4>
+                    </div>
+                </div>
+
+                <!-- Layanan 5 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-start space-x-4">
+                    <div class="p-3 bg-rose-100 text-rose-600 dark:bg-rose-900/50 dark:text-rose-400 rounded-xl text-xl flex-shrink-0">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white" data-i18n="s5">Suplai air bersih rumah sakit</h4>
+                    </div>
+                </div>
+
+                <!-- Layanan 6 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-start space-x-4">
+                    <div class="p-3 bg-indigo-100 text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-400 rounded-xl text-xl flex-shrink-0">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white" data-i18n="s6">Suplai air bersih fasilitas umum dan komersial</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KOMITMEN KAMI BLOCK -->
+            <div class="mt-12 bg-white dark:bg-slate-800 rounded-3xl p-8 border border-cyan-200 dark:border-cyan-900 text-center max-w-4xl mx-auto shadow-md">
+                <h3 class="text-xl font-extrabold text-cyan-600 dark:text-cyan-400 uppercase tracking-wider mb-2" data-i18n="commitment_title">Komitmen Kami</h3>
+                <p class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="commitment_sub">Kepercayaan pelanggan adalah prioritas kami.</p>
+                <p class="text-sm text-slate-600 dark:text-slate-300" data-i18n="commitment_desc">
+                    Kami berkomitmen memberikan pelayanan yang responsif, profesional, dan harga kompetitif untuk mendukung setiap kebutuhan air bersih Anda.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Gallery / Fotos Front Page Section -->
+    <section id="galeri" class="py-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white" data-i18n="gallery_title">
+                    Galeri & Spanduk Resmi
+                </h2>
+                <p class="mt-3 text-slate-600 dark:text-slate-400" data-i18n="gallery_subtitle">
+                    Dokumentasi armada dan spanduk informasi pengiriman Paman Roel Airbersih
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Spanduk Armada & YouTube -->
+                <div class="bg-slate-50 dark:bg-slate-800/60 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col">
+                    <div class="overflow-hidden rounded-xl mb-4 bg-slate-200 dark:bg-slate-900">
+                        <img src="Paman Roel_ Solusi Air Bersih (1).png" 
+                             alt="Armada Truk Tangki Paman Roel" 
+                             class="w-full h-64 object-cover object-center hover:scale-105 transition duration-300"
+                             onerror="this.src='https://placehold.co/800x400/0284c7/fff?text=Armada+Paman+Roel'">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2" data-i18n="banner1_title">Armada Tangki Air & Saluran YouTube</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 flex-grow" data-i18n="banner1_desc">
+                        Kami memiliki ketersediaan armada truk tangki air siap kirim untuk memenuhi kebutuhan pasokan air bersih volume besar. Ikuti kami di YouTube Paman Roel Airbersih!
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center">
+                        <span class="text-xs font-semibold text-red-600 dark:text-red-400 flex items-center gap-1">
+                            <i class="fa-brands fa-youtube text-lg"></i> YouTube Channel
+                        </span>
+                        <a href="https://youtube.com" target="_blank" class="text-xs text-cyan-600 dark:text-cyan-400 font-bold hover:underline" data-i18n="visit_yt">Kunjungi YouTube &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Spanduk Kantor & Legalitas -->
+                <div class="bg-slate-50 dark:bg-slate-800/60 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col">
+                    <div class="overflow-hidden rounded-xl mb-4 bg-slate-200 dark:bg-slate-900">
+                        <img src="Paman Roel_ Solusi Air Bersih.png" 
+                             alt="Layanan Profesional Paman Roel" 
+                             class="w-full h-64 object-cover object-center hover:scale-105 transition duration-300"
+                             onerror="this.src='https://placehold.co/800x400/0284c7/fff?text=Pelayanan+Profesional'">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2" data-i18n="banner2_title">Layanan Higienis & Profesional</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 flex-grow" data-i18n="banner2_desc">
+                        Jaminan kualitas air bersih, bening, dan tidak berbau. Diproses sesuai standar kelayakan untuk kenyamanan dan kesehatan Anda.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center">
+                        <span class="text-xs font-semibold text-green-600 dark:text-green-400 flex items-center gap-1">
+                            <i class="fa-solid fa-circle-check"></i> Quality Guaranteed
+                        </span>
+                        <a href="#kontak" class="text-xs text-cyan-600 dark:text-cyan-400 font-bold hover:underline" data-i18n="order_now">Pesan Sekarang &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Social & Contact Banner Section -->
+    <section id="kontak" class="py-16 bg-gradient-to-r from-blue-700 via-cyan-600 to-blue-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-12 border border-white/20 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl font-black mb-4" data-i18n="cta_title">
+                            Hubungi Paman Roel Airbersih
+                        </h2>
+                        <p class="text-cyan-100 text-base sm:text-lg mb-6" data-i18n="cta_desc">
+                            Butuh suplai air bersih untuk rumah, perusahaan, industri, atau proyek Anda? Jangan ragu untuk menghubungi kami.
+                        </p>
+                        
+                        <!-- Contact Info List -->
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl">
+                                    <i class="fa-brands fa-whatsapp text-green-300"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-cyan-200" data-i18n="label_wa">Telepon / WhatsApp</p>
+                                    <a href="https://wa.me/6281339391396" target="_blank" class="text-xl font-bold hover:underline">+62 813-3939-1396</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl">
+                                    <i class="fa-solid fa-globe text-cyan-300"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-cyan-200" data-i18n="label_web">Website Resmi</p>
+                                    <p class="text-xl font-bold">www.pamanroelairbersih.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="bg-white/10 p-6 rounded-2xl border border-white/10 text-center">
+                        <h3 class="text-xl font-bold mb-4" data-i18n="social_title">Ikuti Media Sosial Kami</h3>
+                        <p class="text-sm text-cyan-100 mb-6" data-i18n="social_subtitle">Dapatkan update promo dan info pengiriman terbaru</p>
+                        
+                        <div class="flex justify-center flex-wrap gap-4">
+                            <a href="#" class="w-12 h-12 rounded-full bg-blue-600 hover:scale-110 transition flex items-center justify-center text-xl shadow" title="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 hover:scale-110 transition flex items-center justify-center text-xl shadow" title="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-black hover:scale-110 transition flex items-center justify-center text-xl shadow" title="TikTok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-red-600 hover:scale-110 transition flex items-center justify-center text-xl shadow" title="YouTube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://wa.me/6281339391396?text=Halo%20Paman%20Roel,%20saya%20ingin%20memesan%20air%20bersih" target="_blank" class="inline-block w-full py-4 bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-extrabold rounded-xl shadow-lg transition uppercase tracking-wider">
+                                <span data-i18n="btn_call_now">HUBUNGI KAMI SEKARANG</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center">
+            <div class="flex items-center justify-center sm:justify-start space-x-3 mb-4 sm:mb-0">
+                <img src="776253023_122127128571354968_8445511704765418148_n.jpg" 
+                     alt="Logo Paman Roel Airbersih" 
+                     class="h-8 w-8 rounded-full object-cover"
+                     onerror="this.src='https://placehold.co/100x100/0284c7/fff?text=PR'">
+                <span class="font-bold text-white">PamanRoelAirbersih</span>
+            </div>
+            <p class="text-xs">&copy; 2023 - 2026 PamanRoelAirbersih. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic: Dark Mode & i18n Translation -->
+    <script>
+        // Dictionary Translation Data
+        const translations = {
+            id: {
+                tagline_nav: "Solusi Kebutuhan Air Bersih Anda",
+                nav_home: "Beranda",
+                nav_about: "Tentang Kami",
+                nav_vision: "Visi & Misi",
+                nav_why: "Mengapa Kami",
+                nav_services: "Layanan",
+                nav_gallery: "Galeri",
+                nav_contact: "Kontak",
+                btn_order: "Pesan Air",
+                hero_badge: "Supplier Air Bersih Terpercaya Sejak 2023",
+                hero_title_1: "Air Bersih untuk Kehidupan yang",
+                hero_title_2: "Lebih Baik",
+                hero_desc: "Paman Roel Airbersih melayani suplai dan distribusi air bersih untuk rumah tangga, perumahan, perusahaan, industri, proyek konstruksi, hotel, restoran, rumah sakit, serta fasilitas umum.",
+                feat_1: "Terpercaya",
+                sub_feat_1: "Kualitas Terjamin",
+                feat_2: "Responsif",
+                sub_feat_2: "Pengiriman Cepat",
+                feat_3: "Profesional",
+                sub_feat_3: "Pelayanan Terbaik",
+                feat_4: "Kompetitif",
+                sub_feat_4: "Harga Penawaran",
+                btn_hero_wa: "Hubungi Kami Sekarang",
+                btn_hero_about: "Tentang Paman Roel",
+                about_subtitle_badge: "Profil Perusahaan",
+                about_title: "TENTANG PAMAN ROEL AIRBERSIH",
+                about_p1: "Paman Roel Airbersih merupakan perusahaan yang bergerak di bidang penyediaan dan distribusi air bersih untuk memenuhi berbagai kebutuhan masyarakat, perumahan, perusahaan, industri, proyek konstruksi, serta berbagai fasilitas umum dan komersial.",
+                about_p2: "Berdiri sejak tahun 2023, Paman Roel Airbersih hadir dengan komitmen memberikan solusi kebutuhan air bersih melalui pelayanan yang profesional, responsif, terpercaya, dan harga yang kompetitif.",
+                about_p3: "Didukung armada kendaraan distribusi air bersih, kami berupaya memberikan pelayanan pengiriman yang efektif dan menyesuaikan kebutuhan pelanggan.",
+                about_p4: "Kami memahami bahwa air bersih merupakan kebutuhan penting dalam kehidupan sehari-hari maupun keberlangsungan operasional usaha dan industri. Oleh karena itu, kepuasan pelanggan, kepercayaan, dan kualitas pelayanan menjadi prioritas kami.",
+                about_slogan: "Paman Roel Airbersih – Solusi Kebutuhan Air Bersih Anda.",
+                est_label: "Melayani Sepenuh Hati",
+                visi_title: "VISI",
+                visi_desc: '"Menjadi supplier dan mitra penyedia air bersih yang terpercaya, profesional, dan menjadi pilihan utama masyarakat, perusahaan, serta berbagai sektor usaha dalam memenuhi kebutuhan air bersih."',
+                visi_footer: "Komitmen Kualitas Utama",
+                misi_title: "MISI",
+                misi_1: "Menyediakan layanan distribusi air bersih yang mengutamakan kualitas pelayanan.",
+                misi_2: "Memberikan pelayanan yang cepat, responsif, dan profesional.",
+                misi_3: "Menawarkan harga yang kompetitif sesuai kebutuhan pelanggan.",
+                misi_4: "Mengembangkan kapasitas dan kesiapan armada distribusi.",
+                misi_5: "Membangun hubungan kerja sama jangka panjang dengan pelanggan.",
+                misi_6: "Mengutamakan kepercayaan, kepuasan, dan kenyamanan pelanggan.",
+                misi_7: "Mendukung pemenuhan kebutuhan air bersih untuk masyarakat, bisnis, industri, dan pembangunan.",
+                why_title: "MENGAPA MEMILIH PAMAN ROEL AIRBERSIH?",
+                why1_title: "1. TERPERCAYA",
+                why1_desc: "Kami mengutamakan kepercayaan dan hubungan kerja sama yang baik dengan setiap pelanggan.",
+                why2_title: "2. RESPONSIF",
+                why2_desc: "Kami berkomitmen memberikan tanggapan dan pelayanan yang komunikatif terhadap kebutuhan pelanggan.",
+                why3_title: "3. PROFESIONAL",
+                why3_desc: "Kami mengutamakan profesionalisme dalam pelayanan, koordinasi, dan proses distribusi.",
+                why4_title: "4. HARGA KOMPETITIF",
+                why4_desc: "Kami menawarkan harga yang kompetitif dan dapat disesuaikan dengan kebutuhan serta volume pemesanan.",
+                why5_title: "5. ARMADA DISTRIBUSI",
+                why5_desc: "Didukung armada kendaraan distribusi untuk membantu memenuhi kebutuhan pengiriman air bersih.",
+                why6_title: "6. MELAYANI BERBAGAI SEKTOR",
+                why6_desc: "Melayani kebutuhan rumah tangga, perumahan, perusahaan, industri, konstruksi, hotel, restoran, dan fasilitas umum.",
+                services_section_title: "Layanan Kami",
+                services_subtitle: "Kebutuhan Air Bersih Anda, Kami Siap Membantu",
+                s1: "Suplai air bersih rumah tangga dan perumahan",
+                s2: "Suplai air bersih perusahaan dan industri",
+                s3: "Suplai air bersih proyek konstruksi",
+                s4: "Suplai air bersih hotel dan restoran",
+                s5: "Suplai air bersih rumah sakit",
+                s6: "Suplai air bersih fasilitas umum dan komersial",
+                commitment_title: "Komitmen Kami",
+                commitment_sub: "Kepercayaan pelanggan adalah prioritas kami.",
+                commitment_desc: "Kami berkomitmen memberikan pelayanan yang responsif, profesional, dan harga kompetitif untuk mendukung setiap kebutuhan air bersih Anda.",
+                gallery_title: "Galeri & Spanduk Resmi",
+                gallery_subtitle: "Dokumentasi armada dan spanduk informasi pengiriman Paman Roel Airbersih",
+                banner1_title: "Armada Tangki Air & Saluran YouTube",
+                banner1_desc: "Kami memiliki ketersediaan armada truk tangki air siap kirim untuk memenuhi kebutuhan pasokan air bersih volume besar. Ikuti kami di YouTube Paman Roel Airbersih!",
+                visit_yt: "Kunjungi YouTube →",
+                banner2_title: "Layanan Higienis & Profesional",
+                banner2_desc: "Jaminan kualitas air bersih, bening, dan tidak berbau. Diproses sesuai standar kelayakan untuk kenyamanan dan kesehatan Anda.",
+                order_now: "Pesan Sekarang →",
+                cta_title: "Hubungi Paman Roel Airbersih",
+                cta_desc: "Butuh suplai air bersih untuk rumah, perusahaan, industri, atau proyek Anda? Jangan ragu untuk menghubungi kami.",
+                label_wa: "Telepon / WhatsApp",
+                label_web: "Website Resmi",
+                social_title: "Ikuti Media Sosial Kami",
+                social_subtitle: "Dapatkan update promo dan info pengiriman terbaru",
+                btn_call_now: "HUBUNGI KAMI SEKARANG"
+            },
+            en: {
+                tagline_nav: "Your Clean Water Need Solution",
+                nav_home: "Home",
+                nav_about: "About Us",
+                nav_vision: "Vision & Mission",
+                nav_why: "Why Us",
+                nav_services: "Services",
+                nav_gallery: "Gallery",
+                nav_contact: "Contact",
+                btn_order: "Order Water",
+                hero_badge: "Trusted Clean Water Supplier Since 2023",
+                hero_title_1: "Clean Water for a",
+                hero_title_2: "Better Life",
+                hero_desc: "Paman Roel Airbersih provides clean water supply and distribution for households, residential areas, companies, industries, construction projects, hotels, restaurants, hospitals, and public facilities.",
+                feat_1: "Trusted",
+                sub_feat_1: "Guaranteed Quality",
+                feat_2: "Responsive",
+                sub_feat_2: "Fast Delivery",
+                feat_3: "Professional",
+                sub_feat_3: "Best Service",
+                feat_4: "Competitive",
+                sub_feat_4: "Fair Pricing",
+                btn_hero_wa: "Contact Us Now",
+                btn_hero_about: "About Paman Roel",
+                about_subtitle_badge: "Company Profile",
+                about_title: "ABOUT PAMAN ROEL AIRBERSIH",
+                about_p1: "Paman Roel Airbersih is a company engaged in the provision and distribution of clean water to meet the needs of the community, housing, companies, industries, construction projects, as well as public and commercial facilities.",
+                about_p2: "Established in 2023, Paman Roel Airbersih is committed to providing clean water solutions through professional, responsive, reliable services, and competitive pricing.",
+                about_p3: "Supported by a fleet of clean water distribution vehicles, we strive to deliver effective delivery services tailored to customer needs.",
+                about_p4: "We understand that clean water is an essential need for daily life as well as business and industrial operations. Therefore, customer satisfaction, trust, and service quality are our top priorities.",
+                about_slogan: "Paman Roel Airbersih – Your Clean Water Need Solution.",
+                est_label: "Serving with Heart",
+                visi_title: "VISION",
+                visi_desc: '"To become a trusted, professional clean water supplier and partner, and the primary choice for communities, companies, and business sectors in meeting their clean water needs."',
+                visi_footer: "Primary Quality Commitment",
+                misi_title: "MISSION",
+                misi_1: "Provide clean water distribution services prioritizing service quality.",
+                misi_2: "Deliver fast, responsive, and professional service.",
+                misi_3: "Offer competitive pricing customized to customer needs.",
+                misi_4: "Develop capacity and readiness of the distribution fleet.",
+                misi_5: "Build long-term cooperative relationships with customers.",
+                misi_6: "Prioritize customer trust, satisfaction, and comfort.",
+                misi_7: "Support clean water supply for society, business, industry, and construction.",
+                why_title: "WHY CHOOSE PAMAN ROEL AIRBERSIH?",
+                why1_title: "1. TRUSTED",
+                why1_desc: "We prioritize trust and good cooperation with every customer.",
+                why2_title: "2. RESPONSIVE",
+                why2_desc: "We are committed to providing communicative responses and services to customer needs.",
+                why3_title: "3. PROFESSIONAL",
+                why3_desc: "We prioritize professionalism in service, coordination, and distribution processes.",
+                why4_title: "4. COMPETITIVE PRICE",
+                why4_desc: "We offer competitive prices tailored to customer needs and order volumes.",
+                why5_title: "5. DISTRIBUTION FLEET",
+                why5_desc: "Supported by a distribution fleet to fulfill clean water delivery demands.",
+                why6_title: "6. SERVING MULTIPLE SECTORS",
+                why6_desc: "Serving households, housing estates, corporations, industries, construction, hotels, restaurants, and public facilities.",
+                services_section_title: "Our Services",
+                services_subtitle: "Your Clean Water Needs, We Are Ready to Help",
+                s1: "Household & residential clean water supply",
+                s2: "Corporate & industrial clean water supply",
+                s3: "Construction project clean water supply",
+                s4: "Hotel & restaurant clean water supply",
+                s5: "Hospital clean water supply",
+                s6: "Public & commercial facility clean water supply",
+                commitment_title: "Our Commitment",
+                commitment_sub: "Customer trust is our top priority.",
+                commitment_desc: "We are committed to providing responsive, professional services, and competitive prices to support all your clean water needs.",
+                gallery_title: "Official Gallery & Banners",
+                gallery_subtitle: "Fleet documentation and official delivery information banners of Paman Roel Airbersih",
+                banner1_title: "Water Tanker Fleet & YouTube Channel",
+                banner1_desc: "We operate a fleet of water tanker trucks ready for large volume clean water supply. Follow us on YouTube Paman Roel Airbersih!",
+                visit_yt: "Visit YouTube →",
+                banner2_title: "Hygienic & Professional Service",
+                banner2_desc: "Guaranteed clear, clean, and odorless water quality. Processed according to safety standards for your comfort and health.",
+                order_now: "Order Now →",
+                cta_title: "Contact Paman Roel Airbersih",
+                cta_desc: "Need clean water supply for your home, company, industry, or project? Do not hesitate to contact us.",
+                label_wa: "Phone / WhatsApp",
+                label_web: "Official Website",
+                social_title: "Follow Our Social Media",
+                social_subtitle: "Get the latest promo updates and delivery info",
+                btn_call_now: "CONTACT US NOW"
+            }
+        };
+
+        let currentLang = 'id';
+
+        // Toggle Language Function
+        function toggleLanguage() {
+            currentLang = currentLang === 'id' ? 'en' : 'id';
+            document.getElementById('langLabel').innerText = currentLang.toUpperCase();
+
+            // Update text elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    element.innerText = translations[currentLang][key];
+                }
+            });
+        }
+
+        // Toggle Theme (Dark / Light Mode) Function
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('themeIcon');
+
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                themeIcon.className = 'fa-solid fa-moon';
+            } else {
+                html.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-sun text-amber-400';
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
